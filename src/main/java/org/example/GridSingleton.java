@@ -1,6 +1,7 @@
 package org.example;
 
-//import org.jetbrains.annotations.TestOnly;
+import org.jetbrains.annotations.TestOnly;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -202,7 +203,7 @@ public class GridSingleton
     {
         clickedCells++;
     }
-   /* @TestOnly
+    @TestOnly
     public static void setRandomSeed() {
         setRandomSeed(1965864024);
     }
@@ -212,5 +213,5 @@ public class GridSingleton
     {
         random.setSeed(seed);
     }
-*/
+
 }

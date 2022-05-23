@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.GridSingleton;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
@@ -11,10 +10,10 @@ public class TestGrid
 {
 
     @BeforeClass
-    public static void disableRandomSeed()
+    /*public static void disableRandomSeed()
     {
         GridSingleton.setRandomSeed();
-    }
+    }*/
 
 
     @Test

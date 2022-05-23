@@ -1,9 +1,9 @@
 package org.example;
 
-import org.example.Cell;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
-import static org.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestCell
 {

@@ -10,33 +10,29 @@ public class TestGrid
 {
 
     @BeforeClass
-    /*public static void disableRandomSeed()
+    public static void disableRandomSeed()
+    {Board.setRandomSeed();}
+    @Test
+    @Tag("CellMineTest")
+    @DisplayName("Test tile does not have a mine given a pre-set seed")
+    public void testCellHasNoMine()
     {
-        GridSingleton.setRandomSeed();
-    }*/
-
-
+        Assertions.assertEquals(-1, Board.getInstance().getBoardTile(1, 1).checkMine, "Tile has mine");
+    }
     @Test
     public void testSeedNotRandom()
     {
-        Assertions.assertEquals(1, GridSingleton.getInstance().getGridCell(1, 'H').hasMine, "Seed not random");
+        Assertions.assertEquals(1, Board.getInstance().getBoardTile(1, 8).checkMine, "Seed not properly done");
     }
-
     @Test
     @Tag("CellMineTest")
-    @DisplayName("Tests a cell has a mine given a pre-set seed")
+    @DisplayName("Test tile has a mine given a pre-set seed")
     public void testCellHasMine()
     {
-        Assertions.assertEquals(1, GridSingleton.getInstance().getGridCell(1, 'H').hasMine, "Set cell does not have mine");
+        Assertions.assertEquals(1, Board.getInstance().getBoardTile(1, 4).checkMine, "Tile does not have mine");
     }
 
-    @Test
-    @Tag("CellMineTest")
-    @DisplayName("Tests a cell does not have a mine given a pre-set seed")
-    public void testCellHasNoMine()
-    {
-        Assertions.assertEquals(-1, GridSingleton.getInstance().getGridCell(1, 'A').hasMine, "Set cell has mine");
-    }
+
 
 
 }
